@@ -2085,7 +2085,7 @@ section{position:relative;overflow:hidden}
 <style>
 /* One ticket, the class's only package. Its price and checkout package follow
    the Malaysia date (see the pricing script): RM897 to 28 Okt, RM997 from 29 Okt. */
-.tk{position:relative;max-width:520px;margin:0 auto;background:#fff;border-radius:30px;box-shadow:0 8px 0 var(--vio-d),0 34px 70px -30px rgb(124 58 237/.6);border:3px solid var(--vio)}
+.tk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:1060px;margin:0 auto}.tk{position:relative;max-width:520px;margin:0 auto;width:100%;background:#fff;border-radius:30px;box-shadow:0 8px 0 var(--vio-d),0 34px 70px -30px rgb(124 58 237/.6);border:3px solid var(--vio)}
 .tk-top{border-radius:26px 26px 0 0;padding:24px 24px 20px;background:radial-gradient(120% 120% at 0% 0%,#7c3aed 0%,#3b1587 60%,#26104f 100%);color:#fff;position:relative;overflow:hidden}
 .tk-top::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgb(240 171 252/.35),transparent 70%)}
 .tk-tag{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:5px 12px;background:rgb(255 255 255/.15);border:1.5px solid rgb(255 255 255/.4);font-size:11.5px;font-weight:900;letter-spacing:.1em}
@@ -2118,6 +2118,7 @@ section{position:relative;overflow:hidden}
 .pk-closed{display:none;margin-top:20px;border-radius:16px;padding:14px;background:var(--vio-50);text-align:center;font-weight:900;color:var(--vio-d)}
 .tk.closed .pk-closed{display:block}
 .tk.closed .pk-price,.tk.closed .pk-now,.tk.closed .pk-note{display:none}
+@media (max-width:900px){.tk-grid{grid-template-columns:minmax(0,1fr)}.tk{max-width:520px}}
 @media (max-width:640px){.tk-info{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;padding:16px 16px 4px}.tk-info div{padding:9px 10px}.tk-info b{font-size:13.5px}.tk-bot{padding:4px 18px 20px}.tk-top{padding:20px 18px 18px}}
 </style>
 <section class="sec bg-cream dots" id="pakej" data-sec="pricing">
@@ -2127,7 +2128,7 @@ section{position:relative;overflow:hidden}
       <h2 class="h2">Satu tiket: <span class="hl">9 modul + 3 bonus</span>.</h2>
       <p class="lead">Kelas fizikal 2 hari di Muar. Tempat terhad kerana kelas dibuat secara praktikal.</p>
     </div>
-    <div class="tk rv" data-tk>
+    <div class="tk-grid"><div class="tk rv">
       <div class="tk-top">
         <span class="tk-tag"><i></i>TIKET KELAS FIZIKAL</span>
         <h3>Kelas AI &amp; Digital Marketing</h3>
@@ -2141,8 +2142,8 @@ section{position:relative;overflow:hidden}
       </div>
       <div class="tk-cut" aria-hidden="true"><i></i></div>
       <div class="tk-bot">
-        <p class="pk-now" data-tier-label>Harga pendaftaran mengikut tarikh daftar</p>
-        <div class="pk-price"><span class="pk-cur">RM</span><span class="pk-amt" data-now>797</span></div>
+        <p class="pk-now">FAST ACTION · sehingga 13 November 2026</p>
+        <div class="pk-price"><span class="pk-cur">RM</span><span class="pk-amt">797</span></div>
         <p class="pk-was">Nilai <span class="strike">RM3,516</span> &middot; Fast Action RM797 sehingga 13 November 2026</p>
         <ul class="pk-ul">
           <li><svg class="pk-ck" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#ddd2fb"/><path d="M6 10.2l2.6 2.6 5.4-5.8" stroke="#5b21b6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Kelas fizikal 2 hari</strong>, 9 modul, 2 hari, 9 pagi &ndash; 6 petang</span></li>
@@ -2150,10 +2151,11 @@ section{position:relative;overflow:hidden}
           <li><svg class="pk-ck" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#fde68a"/><path d="M6 10.2l2.6 2.6 5.4-5.8" stroke="#92400e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Bonus:</strong> prompt kelas</span></li>
           <li><svg class="pk-ck" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#fde68a"/><path d="M6 10.2l2.6 2.6 5.4-5.8" stroke="#92400e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Bonus:</strong> sijil penyertaan</span></li>
         </ul>
-        <a class="pk-cta" href="?add-to-cart=70451" data-pkg="tiket">Tempah Tempat &mdash; RM897</a>
-        <p class="pk-note" data-note>Harga seterusnya RM897 selepas 13 Nov 2026 &middot; Tempat terhad | Kelas Fizikal</p>
+        <a class="pk-cta" href="#payment" data-pkg="fast-action">Tempah Tempat &mdash; RM797</a>
+        <p class="pk-note">Harga Fast Action sehingga 13 November 2026 &middot; Tempat terhad | Kelas Fizikal</p>
         <p class="pk-closed">Pendaftaran kelas ini sudah ditutup.</p>
       </div>
+    <div class="tk rv"><div class="tk-top"><span class="tk-tag"><i></i>DAFTAR BERDUA</span><h3>Advance Bootcamp — Pendaftaran 2 Orang</h3><p>Datang bersama seorang rakan atau partner bisnes. Bina produk dan sistem jualan bersama-sama.</p></div><div class="tk-info"><div><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-cal"/></svg><span><small>Tarikh</small><b>Sabtu &amp; Ahad, 12 &amp; 13 Disember 2026</b></span></div><div><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-clock"/></svg><span><small>Masa</small><b>9.00 pagi &ndash; 6.00 petang</b></span></div><div><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-pin"/></svg><span><small>Tempat</small><b>Bilik Seminar Muar</b></span></div><div><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-users"/></svg><span><small>Peserta</small><b>2 orang</b></span></div></div><div class="tk-cut" aria-hidden="true"><i></i></div><div class="tk-bot"><p class="pk-now">PENDAFTARAN 2 ORANG</p><div class="pk-price"><span class="pk-cur">RM</span><span class="pk-amt">1,497</span></div><p class="pk-was">Jimat RM97 berbanding 2 tiket individu</p><ul class="pk-ul"><li><svg class="pk-ck" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#ddd2fb"/><path d="M6 10.2l2.6 2.6 5.4-5.8" stroke="#5b21b6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>2 tempat kelas fizikal</strong>, untuk anda dan seorang partner</span></li><li><svg class="pk-ck" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#fde68a"/><path d="M6 10.2l2.6 2.6 5.4-5.8" stroke="#92400e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>9 modul + 3 bonus</strong> untuk setiap peserta</span></li><li><svg class="pk-ck" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#fde68a"/><path d="M6 10.2l2.6 2.6 5.4-5.8" stroke="#92400e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Bina idea produk digital sampai lebih bersedia untuk dijual</span></li></ul><a class="pk-cta" href="#payment" data-pkg="two-person">Daftar 2 Orang &mdash; RM1,497</a><p class="pk-note">Harga pakej 2 orang &middot; Tempat terhad | Kelas Fizikal</p></div></div>
     </div>
   </div>
 </section>
@@ -2283,7 +2285,7 @@ section{position:relative;overflow:hidden}
   document.querySelectorAll('[data-tier]').forEach(function(el){var k=Number(el.getAttribute('data-tier')),x=TIERS[k];el.setAttribute('data-state',k<cur?'past':k===cur?'now':'next');var tst=el.querySelector('.tst');if(tst)tst.textContent=k<cur?'(dah tamat)':k===cur?'(harga sekarang)':'(naik selepas '+x.end+')';});
   document.querySelectorAll('[data-now]').forEach(function(e){e.textContent=String(t.price)});
   document.querySelectorAll('[data-tier-label]').forEach(function(e){e.textContent=t.name+' · sehingga '+t.end});
-  document.querySelectorAll('.pk-cta').forEach(function(a){a.setAttribute('href','#payment');a.textContent='Tempah Tempat — RM'+t.price;a.setAttribute('onclick','handleClick(); return false;');});
+  document.querySelectorAll('.pk-cta[data-dynamic]').forEach(function(a){a.setAttribute('href','#payment');a.textContent='Tempah Tempat — RM'+t.price;a.setAttribute('onclick','handleClick(); return false;');});
   document.querySelectorAll('[data-note]').forEach(function(e){e.textContent=next?'Harga naik ke RM'+next.price+' selepas '+t.end+' · tempat terhad':'Harga normal · tempat terhad';});
   document.querySelectorAll('[data-warn]').forEach(function(e){e.textContent=next?'Tempat terhad. Harga naik ke RM'+next.price+' selepas '+t.end+'.':'Tempat terhad. Ini harga normal sehingga hari kelas.';});
 })();
